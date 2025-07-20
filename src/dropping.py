@@ -16,3 +16,4 @@ skala = 10
 
 waktu_jatuh, jarak_horizontal = calculate_drop_data(9, 9)
 jarak_pixel = int(jarak_horizontal * skala)
+
