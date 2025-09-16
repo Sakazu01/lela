@@ -1,0 +1,15 @@
+# VSCode
+.vscode/
+*.vc.db*
+*.db
+*.db-shm
+*.db-wal
+
+# ROS build
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
