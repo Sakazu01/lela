@@ -4,12 +4,13 @@ from std_msgs.msg import String
 from mavros_msgs.msg import VfrHud
 import math
 
-class DroppingReal(Node):
+class DroppingDummy(Node):
     def __init__(self):
-        super().__init__('dropping_real_node')
+        super().__init__('dropping_dummy_node')
         self.color_sub = self.create_subscription(
             String, '/color_warning', self.color_callback, 10
         )
+        # We still subscribe to VFR to trigger the callback, but we ignore its data
         self.vfrhub_sub = self.create_subscription(
             VfrHud, '/mavros/vfr_hud', self.vfr_callback, 10
         )
@@ -18,8 +19,6 @@ class DroppingReal(Node):
 
         # State variables
         self.detected_color = None
-        self.altitude = 0.0
-        self.airspeed = 0.0
         self.target_distance = 1.0
         self.countdown_timer = None
         self.time_left = 0.0
@@ -27,7 +26,7 @@ class DroppingReal(Node):
         self.servo_moves = 0
         self.servo_phase = False
 
-        self.get_logger().info("Dropping node (REAL DATA) started.")
+        self.get_logger().info("Dropping node (DUMMY DATA) started.")
 
     def color_callback(self, msg):
         self.detected_color = msg.data.lower()
@@ -35,19 +34,15 @@ class DroppingReal(Node):
             self.get_logger().info("RED DETECTED")
 
     def vfr_callback(self, msg):
-        # --- MENGGUNAKAN DATA ASLI DARI MAVROS ---
-        self.airspeed = msg.airspeed
-        self.altitude = msg.altitude
+        # --- MENGGUNAKAN DATA DUMMY/HARDCODED ---
+        self.airspeed = 15.0 # m/s
+        self.altitude = 50.0 # meter
         # ----------------------------------------
 
         if self.detected_color == "red" and not self.drop_started:
             self.calculate_drop_timing()
 
     def calculate_drop_timing(self):
-        if self.airspeed < 0.1 or self.altitude < 1.0: # Safety check
-            self.get_logger().warn("Invalid VFR data, skipping drop calculation.")
-            return
-
         gravitasi = 9.81
         t_fall = math.sqrt((2 * self.altitude) / gravitasi)
         d_drop = self.airspeed * t_fall
@@ -56,7 +51,7 @@ class DroppingReal(Node):
             self.time_left = (d_drop - self.target_distance) / self.airspeed
             self.get_logger().info(
                 f"Time until drop: {self.time_left:.1f}s "
-                f"(airspeed={self.airspeed:.2f}, altitude={self.altitude:.2f})"
+                f"(DUMMY airspeed={self.airspeed:.2f}, altitude={self.altitude:.2f})"
             )
             self.countdown_timer = self.create_timer(1.0, self.countdown_callback)
             self.drop_started = True
@@ -103,7 +98,7 @@ class DroppingReal(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = DroppingReal()
+    node = DroppingDummy()
     rclpy.spin(node)
     node.destroy_node()
     rclpy.shutdown()

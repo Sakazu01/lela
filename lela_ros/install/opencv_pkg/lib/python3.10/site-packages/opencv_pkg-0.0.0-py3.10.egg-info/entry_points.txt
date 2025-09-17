@@ -1,8 +1,0 @@
-[console_scripts]
-deteksi_warna = opencv_pkg.deteksi_warna:main
-dropping = opencv_pkg.dropping:main
-dummy_vfr = opencv_pkg.dummy_vfr:main
-hsv_config = opencv_pkg.hsv_config:main
-program_warna = opencv_pkg.program_warna:main
-servo_controller = opencv_pkg.servo_controller:main
-status_text_sender = opencv_pkg.status_text_sender:main
