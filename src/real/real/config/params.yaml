@@ -1,0 +1,34 @@
+/**:
+  ros__parameters:
+    target_waypoint: -1
+    camera_index: 0
+    frame_rate: 10
+    red_h_min_1: 0
+    red_s_min_1: 70
+    red_v_min_1: 50
+    red_h_max_1: 20
+    red_s_max_1: 230
+    red_v_max_1: 255
+    red_h_min_2: 170
+    red_s_min_2: 70
+    red_v_min_2: 50
+    red_h_max_2: 179
+    red_s_max_2: 230
+    red_v_max_2: 255
+    blue_h_min: 100
+    blue_s_min: 50
+    blue_v_min: 50
+    blue_h_max: 130
+    blue_s_max: 255
+    blue_v_max: 255
+    min_area: 5000
+    enable_visualization: false
+    gravity: 9.81
+    target_distance: 2.0
+    min_altitude: 10.0
+    max_altitude: 100.0
+    min_airspeed: 5.0
+    servo_channel: 9
+    pwm_drop: 1900
+    pwm_hold: 1100
+    reset_delay: 1.0
