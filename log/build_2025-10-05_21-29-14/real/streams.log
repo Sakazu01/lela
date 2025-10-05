@@ -1,0 +1,35 @@
+[0.678s] Invoking command in '/home/sakazu01/code/lela/build/real': PYTHONPATH=/home/sakazu01/code/lela/build/real/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sakazu01/code/lela/install/real/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sakazu01/code/lela/build/real/build --no-deps symlink_data
+[0.861s] running develop
+[0.961s] running egg_info
+[0.961s] creating real.egg-info
+[0.970s] writing real.egg-info/PKG-INFO
+[0.970s] writing dependency_links to real.egg-info/dependency_links.txt
+[0.971s] writing entry points to real.egg-info/entry_points.txt
+[0.971s] writing requirements to real.egg-info/requires.txt
+[0.971s] writing top-level names to real.egg-info/top_level.txt
+[0.971s] writing manifest file 'real.egg-info/SOURCES.txt'
+[0.992s] reading manifest file 'real.egg-info/SOURCES.txt'
+[0.992s] writing manifest file 'real.egg-info/SOURCES.txt'
+[1.002s] running build_ext
+[1.003s] Creating /home/sakazu01/code/lela/install/real/lib/python3.12/site-packages/real.egg-link (link to .)
+[1.004s] Installing camera_controller script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] Installing color_detector script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] Installing drop_calculator script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] Installing mission_monitor script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] Installing servo_controller script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] Installing state_manager script to /home/sakazu01/code/lela/install/real/lib/real
+[1.004s] 
+[1.004s] Installed /home/sakazu01/code/lela/build/real
+[1.004s] running symlink_data
+[1.005s] creating /home/sakazu01/code/lela/install/real/share/ament_index
+[1.005s] creating /home/sakazu01/code/lela/install/real/share/ament_index/resource_index
+[1.005s] creating /home/sakazu01/code/lela/install/real/share/ament_index/resource_index/packages
+[1.005s] symbolically linking /home/sakazu01/code/lela/build/real/resource/real -> /home/sakazu01/code/lela/install/real/share/ament_index/resource_index/packages
+[1.005s] symbolically linking /home/sakazu01/code/lela/build/real/package.xml -> /home/sakazu01/code/lela/install/real/share/real
+[1.005s] creating /home/sakazu01/code/lela/install/real/share/real/launch
+[1.005s] symbolically linking /home/sakazu01/code/lela/build/real/launch/sitl_hybrid.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch
+[1.005s] symbolically linking /home/sakazu01/code/lela/build/real/launch/hardware.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch
+[1.006s] symbolically linking /home/sakazu01/code/lela/build/real/launch/production.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch
+[1.006s] creating /home/sakazu01/code/lela/install/real/share/real/config
+[1.006s] symbolically linking /home/sakazu01/code/lela/build/real/real/config/params.yaml -> /home/sakazu01/code/lela/install/real/share/real/config
+[1.031s] Invoked command in '/home/sakazu01/code/lela/build/real' returned '0': PYTHONPATH=/home/sakazu01/code/lela/build/real/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sakazu01/code/lela/install/real/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/sakazu01/code/lela/build/real/build --no-deps symlink_data

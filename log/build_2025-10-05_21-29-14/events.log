@@ -1,0 +1,50 @@
+[0.000000] (-) TimerEvent: {}
+[0.000327] (real) JobQueued: {'identifier': 'real', 'dependencies': OrderedDict()}
+[0.000353] (real) JobStarted: {'identifier': 'real'}
+[0.099644] (-) TimerEvent: {}
+[0.200268] (-) TimerEvent: {}
+[0.300817] (-) TimerEvent: {}
+[0.401448] (-) TimerEvent: {}
+[0.501981] (-) TimerEvent: {}
+[0.602592] (-) TimerEvent: {}
+[0.677305] (real) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/sakazu01/code/lela/build/real/build', '--no-deps', 'symlink_data'], 'cwd': '/home/sakazu01/code/lela/build/real', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sakazu01', 'GIT_ASKPASS': '/home/sakazu01/.vscode-server/bin/385651c938df8a906869babee516bffd0ddb9829/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sakazu01', 'OLDPWD': '/home/sakazu01/code/lela/src/real', 'TERM_PROGRAM_VERSION': '1.104.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-74fa3972-2df2-41af-a15d-864bfb3ae603.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/sakazu01/.vscode-server/bin/385651c938df8a906869babee516bffd0ddb9829/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/sakazu01/.vscode-server/bin/385651c938df8a906869babee516bffd0ddb9829/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sakazu01', 'NAME': 'DESKTOP-C80ESSE', 'WSL_INTEROP': '/run/WSL/430_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/sakazu01/.vscode-server/bin/385651c938df8a906869babee516bffd0ddb9829/bin/remote-cli:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Microsoft/jdk-11.0.16.101-hotspot/bin:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/Lenovo/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Lenovo/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin:/home/sakazu01/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-2a33768a2e.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/sakazu01/code/lela/build/real', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sakazu01/code/lela/build/real/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sakazu01/code/lela/install/real/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}, 'shell': False}
+[0.702888] (-) TimerEvent: {}
+[0.803869] (-) TimerEvent: {}
+[0.861454] (real) StdoutLine: {'line': b'running develop\n'}
+[0.904706] (-) TimerEvent: {}
+[0.960958] (real) StdoutLine: {'line': b'running egg_info\n'}
+[0.961114] (real) StdoutLine: {'line': b'creating real.egg-info\n'}
+[0.970548] (real) StdoutLine: {'line': b'writing real.egg-info/PKG-INFO\n'}
+[0.970672] (real) StdoutLine: {'line': b'writing dependency_links to real.egg-info/dependency_links.txt\n'}
+[0.970881] (real) StdoutLine: {'line': b'writing entry points to real.egg-info/entry_points.txt\n'}
+[0.970956] (real) StdoutLine: {'line': b'writing requirements to real.egg-info/requires.txt\n'}
+[0.970992] (real) StdoutLine: {'line': b'writing top-level names to real.egg-info/top_level.txt\n'}
+[0.971039] (real) StdoutLine: {'line': b"writing manifest file 'real.egg-info/SOURCES.txt'\n"}
+[0.992048] (real) StdoutLine: {'line': b"reading manifest file 'real.egg-info/SOURCES.txt'\n"}
+[0.992400] (real) StdoutLine: {'line': b"writing manifest file 'real.egg-info/SOURCES.txt'\n"}
+[1.002329] (real) StdoutLine: {'line': b'running build_ext\n'}
+[1.003228] (real) StdoutLine: {'line': b'Creating /home/sakazu01/code/lela/install/real/lib/python3.12/site-packages/real.egg-link (link to .)\n'}
+[1.003705] (real) StdoutLine: {'line': b'Installing camera_controller script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004009] (real) StdoutLine: {'line': b'Installing color_detector script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004104] (real) StdoutLine: {'line': b'Installing drop_calculator script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004154] (real) StdoutLine: {'line': b'Installing mission_monitor script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004348] (real) StdoutLine: {'line': b'Installing servo_controller script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004439] (real) StdoutLine: {'line': b'Installing state_manager script to /home/sakazu01/code/lela/install/real/lib/real\n'}
+[1.004506] (real) StdoutLine: {'line': b'\n'}
+[1.004555] (real) StdoutLine: {'line': b'Installed /home/sakazu01/code/lela/build/real\n'}
+[1.004639] (real) StdoutLine: {'line': b'running symlink_data\n'}
+[1.004723] (-) TimerEvent: {}
+[1.004990] (real) StdoutLine: {'line': b'creating /home/sakazu01/code/lela/install/real/share/ament_index\n'}
+[1.005065] (real) StdoutLine: {'line': b'creating /home/sakazu01/code/lela/install/real/share/ament_index/resource_index\n'}
+[1.005105] (real) StdoutLine: {'line': b'creating /home/sakazu01/code/lela/install/real/share/ament_index/resource_index/packages\n'}
+[1.005238] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/resource/real -> /home/sakazu01/code/lela/install/real/share/ament_index/resource_index/packages\n'}
+[1.005288] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/package.xml -> /home/sakazu01/code/lela/install/real/share/real\n'}
+[1.005323] (real) StdoutLine: {'line': b'creating /home/sakazu01/code/lela/install/real/share/real/launch\n'}
+[1.005520] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/launch/sitl_hybrid.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch\n'}
+[1.005582] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/launch/hardware.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch\n'}
+[1.005822] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/launch/production.launch.py -> /home/sakazu01/code/lela/install/real/share/real/launch\n'}
+[1.006062] (real) StdoutLine: {'line': b'creating /home/sakazu01/code/lela/install/real/share/real/config\n'}
+[1.006137] (real) StdoutLine: {'line': b'symbolically linking /home/sakazu01/code/lela/build/real/real/config/params.yaml -> /home/sakazu01/code/lela/install/real/share/real/config\n'}
+[1.030954] (real) CommandEnded: {'returncode': 0}
+[1.045062] (real) JobEnded: {'identifier': 'real', 'rc': 0}
+[1.046129] (-) EventReactorShutdown: {}

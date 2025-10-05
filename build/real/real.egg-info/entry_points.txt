@@ -1,0 +1,7 @@
+[console_scripts]
+camera_controller = real.nodes.camera_controller:main
+color_detector = real.nodes.color_detector:main
+drop_calculator = real.nodes.drop_calculator:main
+mission_monitor = real.nodes.mission_monitor:main
+servo_controller = real.nodes.servo_controller:main
+state_manager = real.nodes.state_manager:main
