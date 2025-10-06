@@ -1,9 +1,7 @@
 package.xml
 setup.cfg
 setup.py
-launch/hardware.launch.py
 launch/production.launch.py
-launch/sitl_hybrid.launch.py
 real/__init__.py
 real.egg-info/PKG-INFO
 real.egg-info/SOURCES.txt
@@ -17,6 +15,7 @@ real/nodes/__init__.py
 real/nodes/camera_controller.py
 real/nodes/color_detector.py
 real/nodes/drop_calculator.py
+real/nodes/message_publisher.py
 real/nodes/mission_monitor.py
 real/nodes/servo_controller.py
 real/nodes/state_manager.py

@@ -1,1 +1,0 @@
-/home/sakazu01/code/lela/build/real/launch/sitl_hybrid.launch.py
