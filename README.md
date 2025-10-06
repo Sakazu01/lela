@@ -1,6 +1,5 @@
 # LELA - Autonomous Payload Dropping System
 
-Sistem deteksi hotspot dan payload dropping otomatis untuk kompetisi drone.
 
 ## Spesifikasi
 
@@ -9,7 +8,7 @@ Sistem deteksi hotspot dan payload dropping otomatis untuk kompetisi drone.
 - **Flight Controller**: Matek H743 (ArduPilot/PX4)
 - **Camera**: Raspberry Pi Camera (720p)
 - **Payload**: 1.5 kg
-- **Altitude**: 30 meters
+- **Altitude**: 30 meters (Approx)
 - **Mission**: 12 hotspot waypoints
 
 ## Misi
