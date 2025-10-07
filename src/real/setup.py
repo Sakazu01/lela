@@ -32,6 +32,7 @@ setup(
             'color_detector = real.nodes.color_detector:main',
             'drop_calculator = real.nodes.drop_calculator:main',
             'servo_controller = real.nodes.servo_controller:main',
+            'message_publisher = real.nodes.message_publisher:main',
         ],
     },
 )

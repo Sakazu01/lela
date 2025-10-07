@@ -9,9 +9,11 @@ class MissionMonitor(Node):
     def __init__(self):
         super().__init__('mission_monitor')
         
+        # Parameters
         self.declare_parameter('target_waypoint', -1)
         self.target_wp = self.get_parameter('target_waypoint').value
         
+        # Subscribers
         self.wp_sub = self.create_subscription(
             WaypointReached,
             '/mavros/mission/reached',
@@ -19,16 +21,32 @@ class MissionMonitor(Node):
             10
         )
         
+        # Publishers
         self.wp_reached_pub = self.create_publisher(Bool, '/mission/waypoint_reached', 10)
         
-        self.get_logger().info(f'Mission Monitor ready (target WP: {self.target_wp})')
+        # State
+        self.last_waypoint = -1
+        
+        if self.target_wp == -1:
+            self.get_logger().info('Mission Monitor ready (triggering on ANY waypoint)')
+        else:
+            self.get_logger().info(f'Mission Monitor ready (target WP: {self.target_wp})')
     
     def waypoint_callback(self, msg):
+        """Handle waypoint reached event"""
         wp_seq = msg.wp_seq
+        
+        # Prevent duplicate triggers
+        if wp_seq == self.last_waypoint:
+            self.get_logger().debug(f'Waypoint {wp_seq} already processed, ignoring')
+            return
+        
+        self.last_waypoint = wp_seq
         self.get_logger().info(f'Waypoint {wp_seq} reached')
         
+        # Check if this is target waypoint
         if self.target_wp == -1 or wp_seq == self.target_wp:
-            self.get_logger().info(f'Target waypoint reached - triggering system')
+            self.get_logger().info(f'✓ Target waypoint reached - triggering system')
             
             trigger = Bool()
             trigger.data = True
@@ -37,9 +55,14 @@ class MissionMonitor(Node):
 def main(args=None):
     rclpy.init(args=args)
     node = MissionMonitor()
-    rclpy.spin(node)
-    node.destroy_node()
-    rclpy.shutdown()
+    
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        node.get_logger().info('Shutting down Mission Monitor...')
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
