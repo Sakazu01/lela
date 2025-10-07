@@ -76,21 +76,26 @@ class CameraController(Node):
             self.start_camera()
         elif not msg.data and self.camera_enabled:
             self.stop_camera()
-    
+            
     def start_camera(self):
-        """Start camera capture"""
+        """Start camera capture with warm-up period"""
         self.get_logger().info('Starting camera...')
         
         try:
             if self.use_picamera2:
                 self._start_picamera2()
+                
+                # Warm-up period untuk auto-exposure stabilization
+                self.get_logger().info('Camera warming up (2s)...')
+                import time
+                time.sleep(2.0)  # Allow AE/AWB to stabilize
+                self.get_logger().info('Camera ready')
             else:
                 self._start_opencv()
             
             self.camera_enabled = True
             self.consecutive_failures = 0
             
-            # Publish status
             status = Bool()
             status.data = True
             self.status_pub.publish(status)
