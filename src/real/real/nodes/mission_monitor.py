@@ -3,7 +3,7 @@
 import rclpy
 from rclpy.node import Node
 from mavros_msgs.msg import WaypointReached
-from std_msgs.msg import Bool
+from std_msgs.msg import Int16  # MODIFIED: Changed from Bool to Int16
 
 class MissionMonitor(Node):
     def __init__(self):
@@ -22,7 +22,8 @@ class MissionMonitor(Node):
         )
         
         # Publishers
-        self.wp_reached_pub = self.create_publisher(Bool, '/mission/waypoint_reached', 10)
+        # MODIFIED: Publisher now sends Int16 (the waypoint number)
+        self.wp_reached_pub = self.create_publisher(Int16, '/mission/waypoint_reached', 10)
         
         # State
         self.last_waypoint = -1
@@ -46,11 +47,12 @@ class MissionMonitor(Node):
         
         # Check if this is target waypoint
         if self.target_wp == -1 or wp_seq == self.target_wp:
-            self.get_logger().info(f'✓ Target waypoint reached - triggering system')
+            self.get_logger().info(f'✓ Target waypoint {wp_seq} reached - triggering system')
             
-            trigger = Bool()
-            trigger.data = True
-            self.wp_reached_pub.publish(trigger)
+            # MODIFIED: Publish the waypoint sequence number
+            trigger_msg = Int16()
+            trigger_msg.data = wp_seq
+            self.wp_reached_pub.publish(trigger_msg)
 
 def main(args=None):
     rclpy.init(args=args)
